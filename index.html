@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new </title>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2 id="skip" onclick="skip()" style="display: block;">SKIP-></h2>
+    <div class="loader" id="loader">
+        <div id="centering">
+            <img src="load.webp" width="300px" id="loadgif" style="display: none;">
+            <div class="text-container" id="textContainer"></div>
+        </div>
+    </div>
+    <main id="main">
+        <div class="card" id="card1" style="--active-color: #d48181" onclick="zoom(this)">
+            <pixel-canvas data-gap="4" data-speed="80" data-colors="#fecdd3, #fda4af, #e11d48" data-no-focus></pixel-canvas>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentcolor">
+                <path d="M16 14h.5c.827 0 1.5-.673 1.5-1.5v-9c0-.827-.673-1.5-1.5-1.5h-13C2.673 2 2 2.673 2 3.5V18l5.333-4H16zm-9.333-2L4 14V4h12v8H6.667z"></path>
+                <path d="M20.5 8H20v6.001c0 1.1-.893 1.993-1.99 1.999H8v.5c0 .827.673 1.5 1.5 1.5h7.167L22 22V9.5c0-.827-.673-1.5-1.5-1.5z"></path>
+            </svg>
+            <button>Dropper</button>
+        </div>
+
+        <div class="card" id="card2" style="--active-color: #feced3" onclick="zoom(this)">
+            <pixel-canvas data-gap="4" data-speed="80" data-colors="#fce2e1, #fafafa, #eba7a7" data-no-focus></pixel-canvas>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentcolor">
+                <path d="M20 2H8c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM8 16V4h12l.002 12H8z"></path>
+                <path d="M4 8H2v12c0 1.103.897 2 2 2h12v-2H4V8z"></path>
+                <path d="m12 12-1-1-2 3h10l-4-6z"></path>
+            </svg>
+            <button>Layout</button>
+        </div>
+        
+
+        <div class="card" id="card3" style="--active-color: #fef08a" onclick="zoom(this)">
+            <pixel-canvas data-gap="4" data-speed="20" data-colors="#fef08a, #fde047, #eab308"></pixel-canvas>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentcolor">
+                <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
+                <path d="M13 7h-2v5.414l3.293 3.293 1.414-1.414L13 11.586z"></path>
+            </svg>
+            <button>Command</button>
+        </div>
+        
+        
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Cabin Sketch", serif;
+    color: white;
+    background-color: #f9f9f9;
+}
+
+#collage-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    /* Ensures images align properly at the top of the row */
+}
+
+#centering {
+    display: grid;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#loadgif {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#add-image-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 24px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+#close-image-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000000000;
+    font-size: 24px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+#add-image-btn:hover {
+    background-color: #45a049;
+}
+
+#collage-container>img {
+    max-width: 300px;
+    /* Set maximum width */
+    width: auto;
+    /* Let width adjust to maintain aspect ratio */
+    height: auto;
+    /* Ensure height adjusts automatically */
+    display: block;
+    border-radius: 8px;
+    object-fit: contain;
+    /* Ensures content fits without cropping or stretching */
+    align-self: flex-start;
+    /* Align images to the start of the row */
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#collage-container>img:hover {
+    transform: scale(1.05) translateY(-10px) rotateX(5deg);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.loader {
+    position: fixed;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 101vh;
+    z-index: 10011;
+    width: 101%;
+    background-color: rgba(0, 0, 0, 0.612);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.loader>img {
+    margin-left: auto;
+    width: 200px;
+}
+
+
+.text-container {
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 15px;
+    animation: fadeInLoop 2s ease-in-out infinite;
+}
+
+@keyframes fadeInLoop {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-text span {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

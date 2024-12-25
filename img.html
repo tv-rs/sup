@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>new </title>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+  <link rel="stylesheet" href="img.css">
+</head>
+
+<body>
+  <button id="add-image-btn">+</button>
+  <button id="close-image-btn" style="display: none;" onclick="close_img()">x</button>
+  <div class="loader" id="loader" style="display: flex;">
+    <div id="centering">
+      <img src="load.gif" width="300px" id="loadgif" >
+      <div class="text-container" id="textContainer">Loading...</div>
+    </div>
+  </div>
+
+  <div class="loader" id="loaderpop" style="display: none;">
+    <div id="centering">
+      <img src="load.webp" style="max-height: 100vh; max-width:100vw;" id="popimg" width="100%" height="100%" >
+    </div>
+  </div>
+
+  <div id="collage-container">
+    <input type="file" id="image-upload" accept="image/*" hidden>
+  </div>
+  <script src="img.js"></script>
+</body>
+
+</html>
